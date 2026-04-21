@@ -1,0 +1,79 @@
+/* src/components/Hero.css */
+
+/* --- Contenedor principal --- */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: auto;
+}
+
+/* --- LOGO Y NOMBRE (Cabecera) --- */
+.hero-header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #000; /* Fondo negro */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 90px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  /* Degradado para el texto */
+  background: linear-gradient(90deg, #FFFFFF, #E0E0E0); 
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- BANNER ANIMADO --- */
+.animated-banner {
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  /* Degradado Negro a Blanco Tiza */
+  background: linear-gradient(-45deg, #000000, #333333, #F5F5F5);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- TÍTULO Y SUBTÍTULO --- */
+.hero-title {
+  margin: 0; 
+  margin-bottom: 1.5rem; /* ESTO ES LO QUE SEPARA EL TÍTULO DEL SUBTÍTULO */
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0; /* Asegura que no tenga márgenes extra */
+}

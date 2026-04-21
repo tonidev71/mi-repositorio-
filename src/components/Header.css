@@ -1,0 +1,39 @@
+/* src/components/Header.css */
+
+.header-zeniza {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+  /* Usamos colores directos o puedes usar las variables si ya las definiste en index.css */
+  background-color: rgba(26, 26, 26, 0.8); 
+  backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
+  border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.titulo-portafolio-mini {
+  font-family: 'Cinzel', serif;
+  color: #f5f5f5; /* Blanco ceniza */
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  margin: 0;
+}
+
+.nav-links a {
+  font-family: 'Cinzel', serif;
+  color: #f5f5f5; /* Blanco ceniza */
+  text-decoration: none;
+  margin-left: 2.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}

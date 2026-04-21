@@ -1,0 +1,35 @@
+/* src/components/Footer.css */
+.footer-container {
+  padding: 4rem 10%;
+  text-align: center;
+  border-top: 1px solid rgba(245, 245, 245, 0.1);
+  background-color: #121212; /* Un tono un poco más oscuro que el fondo normal */
+}
+
+.footer-title {
+  font-family: 'Cinzel', serif;
+  color: #f5f5f5;
+  margin-bottom: 1rem;
+}
+
+.email-link {
+  display: block;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  margin: 2rem 0;
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+
+.social-links a {
+  color: #ccc;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+}
+
+.copyright {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #666;
+}
