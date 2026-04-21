@@ -77,3 +77,21 @@
   color: rgba(255, 255, 255, 0.9);
   margin: 0; /* Asegura que no tenga márgenes extra */
 }
+/* --- AJUSTES PARA MÓVILES (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+  
+  .hero-title {
+    font-size: 2rem;       /* Reducimos el tamaño de la letra */
+    line-height: 1.2;      /* Aumentamos un poco el interlineado para que no se monten las letras */
+    gap: 5px;              /* Reducimos el espacio entre elementos */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;       /* Subtítulo un poco más pequeño en móvil */
+    padding: 0 1rem;       /* Añadimos un poco de aire a los lados */
+  }
+
+  .hero-header {
+    padding: 1rem;         /* Reducimos el padding de la cabecera en móvil */
+  }
+}
