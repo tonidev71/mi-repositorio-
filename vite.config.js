@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// En tu archivo vite.config.js
 export default defineConfig({
-  plugins: [react()],
-
-  base:'/Mi-Portafolio/',
+  base: './', // Cambia esto a './' o '/'
+  // ... resto de tu configuración
 })
