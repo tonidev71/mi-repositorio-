@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import './Projects.css';
 
 // --- IMPORTACIONES ---
-// 1. TU FOTO (Asegúrate de que el nombre y la extensión coincidan)
-import miFoto from "../assets/foto1.png"; 
-
-// 2. Resto de assets (Tus diplomas y proyectos originales)
+import miFoto from "../assets/toni2.jpg"; 
 import diploma1 from "../assets/diploma1.jpg";
 import diploma2 from "../assets/diploma2.jpg";
 import diploma3 from "../assets/diploma3.jpg";
@@ -14,7 +11,7 @@ import p3 from "../assets/proyecto3.png";
 import p4 from "../assets/proyecto4.png";
 import p5 from "../assets/proyecto5.png";
 
-// --- DATOS (Inalterados) ---
+// --- DATOS ---
 const diplomas = [
   { id: 1, title: "Certificado 1", desc: "Descripción 1", img: diploma1 },
   { id: 2, title: "Certificado 2", desc: "Descripción 2", img: diploma2 },
@@ -32,40 +29,23 @@ const Projects = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    // Usamos el contenedor principal que ya tenías
     <div className="projects-container">
 
-      {/* ≡≡≡≡≡≡≡≡≡≡≡ NUEVA SECCIÓN: SOBRE MÍ ≡≡≡≡≡≡≡≡≡≡≡ */}
+      {/* SECCIÓN: SOBRE MÍ */}
       <section id="sobre-mi" className="about-me-section">
         <div className="about-me-container">
-          
-          {/* Contenedor de la Foto con Encuadre */}
           <div className="about-me-image-frame">
             <img src={miFoto} alt="Toni Dev" className="about-me-foto" />
           </div>
-
-          {/* Contenedor del Texto */}
           <div className="about-me-text">
             <h2 className="section-title-about">Sobre Mí</h2>
             <h3>Desarrollador Web Full Stack</h3>
-            <p>
-              Soy un desarrollador web apasionado por crear experiencias digitales excepcionales. 
-              Con un enfoque tanto en el Front-End como en el Back-End, me especializo en transformar ideas complejas en aplicaciones funcionales, eficientes y visualmente impactantes.
-            </p>
-            <p>
-              Mi stack tecnológico principal incluye tecnologías modernas como [Tu Stack, ej: React, Node.js, Express, MongoDB]. Constantemente me mantengo actualizado con las últimas tendencias de la industria para ofrecer soluciones innovadoras y de alta calidad.
-            </p>
-            <p>
-              Más allá del código, disfruto resolver problemas, optimizar el rendimiento y colaborar en proyectos que desafíen mis habilidades y me permitan crecer profesionalmente.
-            </p>
+            <p>Soy un desarrollador web apasionado por crear experiencias digitales excepcionales...</p>
           </div>
-
         </div>
       </section>
-      {/* ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡ */}
 
-
-      {/* SECCIÓN DE DIPLOMAS (Inalterada) */}
+      {/* SECCIÓN DE DIPLOMAS */}
       <h2 className="section-title" style={{marginTop: '4rem'}}>Diplomas y Certificados</h2>
       <div className="grid">
         {diplomas.map((d) => (
@@ -81,7 +61,7 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* SECCIÓN DE PROYECTOS (Inalterada) */}
+      {/* SECCIÓN DE PROYECTOS */}
       <h2 className="section-title" style={{marginTop: '4rem'}}>Mis Proyectos</h2>
       <div className="grid">
         {myProjects.map((p) => (
@@ -100,14 +80,29 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* MODAL (Inalterado) */}
+      {/* ≡≡≡≡≡ NUEVA SECCIÓN: CONTACTEMOS ≡≡≡≡≡ */}
+      <section id="contactemos" className="contact-section" style={{marginTop: '4rem', textAlign: 'center'}}>
+        <h2 className="section-title">Contactemos</h2>
+        <p>¿Quieres ver mi perfil o explorar mis repositorios? Haz clic abajo:</p>
+        
+        <div className="social-links" style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', gap: '20px' }}>
+          <a href="https://www.linkedin.com/in/tonidev71" target="_blank" rel="noopener noreferrer" className="btn-social">
+            Ver LinkedIn
+          </a>
+          <a href="https://github.com/tonidev71" target="_blank" rel="noopener noreferrer" className="btn-social">
+            Ver GitHub
+          </a>
+        </div>
+      </section>
+
+      {/* MODAL */}
       {selectedImage && (
         <div className="lightbox-overlay" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Ampliado" className="lightbox-image" />
         </div>
       )}
 
-    </div> // Cierre de projects-container
+    </div>
   );
 };
 
